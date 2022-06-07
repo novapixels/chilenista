@@ -122,3 +122,680 @@ Started GET "/expressions" for 127.0.0.1 at 2022-06-07 17:33:09 +0200
   
 ActionController::RoutingError (No route matches [GET] "/expressions"):
   
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE "chilenista_2_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "chilenista_2_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2646884912115203970)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExpressions (20220607154508)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "expressions" ("id" bigserial primary key, "sentence" character varying, "definition" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220607154508"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2646884912115203970)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mExpression Load (1.6ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.9ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Al tiro"], ["definition", "En seguida"], ["created_at", "2022-06-07 15:51:18.374741"], ["updated_at", "2022-06-07 15:51:18.374741"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.4ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Arriba de la pelota"], ["definition", "Borracho o ebrio"], ["created_at", "2022-06-07 15:51:18.398999"], ["updated_at", "2022-06-07 15:51:18.398999"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.4ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Quedar raja"], ["definition", "Muy ebrio o borracho"], ["created_at", "2022-06-07 15:51:18.435144"], ["updated_at", "2022-06-07 15:51:18.435144"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.6ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar con la caña"], ["definition", "Tener resaca"], ["created_at", "2022-06-07 15:51:18.437381"], ["updated_at", "2022-06-07 15:51:18.437381"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Yendo en la profundidad"], ["definition", "Filosofar o meditar profundamente sobre los vaivenes de la vida"], ["created_at", "2022-06-07 15:51:18.439912"], ["updated_at", "2022-06-07 15:51:18.439912"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Apretar cachete"], ["definition", "Correr apurado"], ["created_at", "2022-06-07 15:51:18.442204"], ["updated_at", "2022-06-07 15:51:18.442204"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hacerla corta"], ["definition", "Abreviar un trámite o resumir una historia muy larga, demorarse poco"], ["created_at", "2022-06-07 15:51:18.444282"], ["updated_at", "2022-06-07 15:51:18.444282"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Tener olor a gladiolos"], ["definition", "Estar a punto de morir"], ["created_at", "2022-06-07 15:51:18.446449"], ["updated_at", "2022-06-07 15:51:18.446449"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pellizcar la uva"], ["definition", "intención de quitarle el novio o novia a alguien"], ["created_at", "2022-06-07 15:51:18.448412"], ["updated_at", "2022-06-07 15:51:18.448412"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Mojarse el potito"], ["definition", "Atreverse, decir algo osado"], ["created_at", "2022-06-07 15:51:18.450329"], ["updated_at", "2022-06-07 15:51:18.450329"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.4ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Andar con el Kino acumulado"], ["definition", "No tener relaciones sexuales en un tiempo considerable"], ["created_at", "2022-06-07 15:51:18.452222"], ["updated_at", "2022-06-07 15:51:18.452222"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Para chuparse los bigotes"], ["definition", "La comida estaba muy rica"], ["created_at", "2022-06-07 15:51:18.454276"], ["updated_at", "2022-06-07 15:51:18.454276"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pisar el palito"], ["definition", "Casarse"], ["created_at", "2022-06-07 15:51:18.456170"], ["updated_at", "2022-06-07 15:51:18.456170"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "La mano que aprieta"], ["definition", "La pareja controladora"], ["created_at", "2022-06-07 15:51:18.458041"], ["updated_at", "2022-06-07 15:51:18.458041"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar en cana o Canadá"], ["definition", "Estar preso en la cárcel"], ["created_at", "2022-06-07 15:51:18.459934"], ["updated_at", "2022-06-07 15:51:18.459934"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Aserruchar el piso"], ["definition", "Quitarle el trabajo a alguien"], ["created_at", "2022-06-07 15:51:18.462138"], ["updated_at", "2022-06-07 15:51:18.462138"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Subir al columpio"], ["definition", "Burlarse de alguien"], ["created_at", "2022-06-07 15:51:18.464140"], ["updated_at", "2022-06-07 15:51:18.464140"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Está peluo"], ["definition", "Es o está difícil"], ["created_at", "2022-06-07 15:51:18.466078"], ["updated_at", "2022-06-07 15:51:18.466078"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Dar lata / paja"], ["definition", "Algo que da flojera, desgano o pereza"], ["created_at", "2022-06-07 15:51:18.467933"], ["updated_at", "2022-06-07 15:51:18.467933"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar achacado"], ["definition", "Estar angustiados o tristes"], ["created_at", "2022-06-07 15:51:18.469806"], ["updated_at", "2022-06-07 15:51:18.469806"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ir a carretear"], ["definition", "Ir de fiesta"], ["created_at", "2022-06-07 15:51:18.471723"], ["updated_at", "2022-06-07 15:51:18.471723"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser apretado"], ["definition", "Ser poco desprendido o que no le gusta compartir sus cosas"], ["created_at", "2022-06-07 15:51:18.473788"], ["updated_at", "2022-06-07 15:51:18.473788"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Sacar pica"], ["definition", "Provocar celos o envidia"], ["created_at", "2022-06-07 15:51:18.475756"], ["updated_at", "2022-06-07 15:51:18.475756"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "No estar ni ahí"], ["definition", "No le interesa o no le importa"], ["created_at", "2022-06-07 15:51:18.477672"], ["updated_at", "2022-06-07 15:51:18.477672"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Correr mano"], ["definition", "Manosear a alguien"], ["created_at", "2022-06-07 15:51:18.479635"], ["updated_at", "2022-06-07 15:51:18.479635"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Quedar la crema / Dejar la cagada / Dejar la escoba"], ["definition", "Armar un escándalo, un desastre o un mal entendido"], ["created_at", "2022-06-07 15:51:18.481537"], ["updated_at", "2022-06-07 15:51:18.481537"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Creerse la muerte"], ["definition", "Ser egocéntrico, vanagloriarse o sentirse orgulloso de algo"], ["created_at", "2022-06-07 15:51:18.483438"], ["updated_at", "2022-06-07 15:51:18.483438"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Dar la hora"], ["definition", "Estar en un lugar perdiendo el tiempo"], ["created_at", "2022-06-07 15:51:18.485364"], ["updated_at", "2022-06-07 15:51:18.485364"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Darse vuelta la chaqueta"], ["definition", "Cambiar de opinión según convenga"], ["created_at", "2022-06-07 15:51:18.487354"], ["updated_at", "2022-06-07 15:51:18.487354"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Dar jugo"], ["definition", "Decir o hacer cosas sin sentido"], ["created_at", "2022-06-07 15:51:18.489060"], ["updated_at", "2022-06-07 15:51:18.489060"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Salió con un domingo siete"], ["definition", "Quedó embarazada inesperadamente"], ["created_at", "2022-06-07 15:51:18.490760"], ["updated_at", "2022-06-07 15:51:18.490760"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Todas las micros le sirven"], ["definition", "No es muy riguroso o rigurosa para elegir parejas"], ["created_at", "2022-06-07 15:51:18.492509"], ["updated_at", "2022-06-07 15:51:18.492509"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Más prendido que tele de conserje"], ["definition", "Tiene una energía infinita"], ["created_at", "2022-06-07 15:51:18.494212"], ["updated_at", "2022-06-07 15:51:18.494212"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Rallar la papa o peinar la muñeca"], ["definition", "Estar haciendo o diciendo una locura o algo sin sentido"], ["created_at", "2022-06-07 15:51:18.495925"], ["updated_at", "2022-06-07 15:51:18.495925"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ojo al charqui"], ["definition", "Poner atención a alguna situación"], ["created_at", "2022-06-07 15:51:18.497604"], ["updated_at", "2022-06-07 15:51:18.497604"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Mano de guagua"], ["definition", "Persona que no quiere gastar dinero"], ["created_at", "2022-06-07 15:51:18.499304"], ["updated_at", "2022-06-07 15:51:18.499304"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Saltó lejos el maní"], ["definition", "Cuando alguien se mete en una conversación en la que no estaba incluido"], ["created_at", "2022-06-07 15:51:18.501018"], ["updated_at", "2022-06-07 15:51:18.501018"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Al que le quede el poncho que se lo ponga"], ["definition", "Cuando una persona se siente identificada por una indirecta"], ["created_at", "2022-06-07 15:51:18.502700"], ["updated_at", "2022-06-07 15:51:18.502700"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pasarlo filete"], ["definition", "Pasarlo muy bien"], ["created_at", "2022-06-07 15:51:18.504394"], ["updated_at", "2022-06-07 15:51:18.504394"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.4ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Borrar el casete"], ["definition", "Se te borra la memoria cuando bebes"], ["created_at", "2022-06-07 15:51:18.506085"], ["updated_at", "2022-06-07 15:51:18.506085"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Apagar la tele"], ["definition", "Quedar inconsciente de tanto beber"], ["created_at", "2022-06-07 15:51:18.508098"], ["updated_at", "2022-06-07 15:51:18.508098"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.3ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Importar una raja"], ["definition", "No importa"], ["created_at", "2022-06-07 15:51:18.509847"], ["updated_at", "2022-06-07 15:51:18.509847"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Sacar el rollo"], ["definition", "Conocer, evaluar a alguien"], ["created_at", "2022-06-07 15:51:18.511639"], ["updated_at", "2022-06-07 15:51:18.511639"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Más cosido que un botón de oro"], ["definition", "Estar muy borracho"], ["created_at", "2022-06-07 15:51:18.513334"], ["updated_at", "2022-06-07 15:51:18.513334"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "El día del pico / corneta"], ["definition", "Jamás o en un futuro poco probable"], ["created_at", "2022-06-07 15:51:18.515064"], ["updated_at", "2022-06-07 15:51:18.515064"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Volantín de cuero"], ["definition", "Que no invita nunca"], ["created_at", "2022-06-07 15:51:18.516866"], ["updated_at", "2022-06-07 15:51:18.516866"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Sanguchito de palta"], ["definition", "Que cuenta todo, no guarda secretos"], ["created_at", "2022-06-07 15:51:18.518675"], ["updated_at", "2022-06-07 15:51:18.518675"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Chupar más que orilla de playa"], ["definition", "Beber mucho"], ["created_at", "2022-06-07 15:51:18.520434"], ["updated_at", "2022-06-07 15:51:18.520434"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Tener la media cuea / Ser rajuo"], ["definition", "Tener suerte"], ["created_at", "2022-06-07 15:51:18.522215"], ["updated_at", "2022-06-07 15:51:18.522215"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Se te cayó el carnet"], ["definition", "Desvelar tu edad con un hecho de conocimiento público que pasó hace tiempo"], ["created_at", "2022-06-07 15:51:18.524040"], ["updated_at", "2022-06-07 15:51:18.524040"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Tirarse los pedos más arriba del culo"], ["definition", "Ser muy sobrado o creído"], ["created_at", "2022-06-07 15:51:18.525743"], ["updated_at", "2022-06-07 15:51:18.525743"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "La última chupa del mate"], ["definition", "Lo mejor, o que se cree lo mejor"], ["created_at", "2022-06-07 15:51:18.527484"], ["updated_at", "2022-06-07 15:51:18.527484"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Después de la pega"], ["definition", "Después del trabajo"], ["created_at", "2022-06-07 15:51:18.529211"], ["updated_at", "2022-06-07 15:51:18.529211"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hacer el cuento corto"], ["definition", "Resumir, apurarse"], ["created_at", "2022-06-07 15:51:18.530962"], ["updated_at", "2022-06-07 15:51:18.530962"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Cara de raja"], ["definition", "Cara dura, sin vergüenza"], ["created_at", "2022-06-07 15:51:18.532712"], ["updated_at", "2022-06-07 15:51:18.532712"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "No nos topamos"], ["definition", "No coincidimos, no nos encontramos"], ["created_at", "2022-06-07 15:51:18.534419"], ["updated_at", "2022-06-07 15:51:18.534419"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estirar el chicle"], ["definition", "Alargar una situación"], ["created_at", "2022-06-07 15:51:18.536025"], ["updated_at", "2022-06-07 15:51:18.536025"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Livianito de sangre"], ["definition", "Simpático, agradable, que cae bien rápido"], ["created_at", "2022-06-07 15:51:18.537652"], ["updated_at", "2022-06-07 15:51:18.537652"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Tirarle los churrines / calzones"], ["definition", "Coquetearle"], ["created_at", "2022-06-07 15:51:18.539225"], ["updated_at", "2022-06-07 15:51:18.539225"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "El/la patas negras"], ["definition", "El/la amante"], ["created_at", "2022-06-07 15:51:18.540982"], ["updated_at", "2022-06-07 15:51:18.540982"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Asado de vidrio"], ["definition", "Junta para beber y comer carne barata"], ["created_at", "2022-06-07 15:51:18.542621"], ["updated_at", "2022-06-07 15:51:18.542621"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser chupa medias"], ["definition", "Ser alguien que halaga mucho a otras personas para conseguir algo a cambio"], ["created_at", "2022-06-07 15:51:18.544220"], ["updated_at", "2022-06-07 15:51:18.544220"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Maestro chasquilla"], ["definition", "Maestros que hacen de todo, pero sin expertiz o estudios en el área"], ["created_at", "2022-06-07 15:51:18.545793"], ["updated_at", "2022-06-07 15:51:18.545793"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hablar calzón quitado"], ["definition", "Conversar con precisión y franqueza"], ["created_at", "2022-06-07 15:51:18.547349"], ["updated_at", "2022-06-07 15:51:18.547349"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Caído del catre"], ["definition", "Torpe"], ["created_at", "2022-06-07 15:51:18.548926"], ["updated_at", "2022-06-07 15:51:18.548926"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser seco"], ["definition", "Ser muy pro, profesional, experto"], ["created_at", "2022-06-07 15:51:18.550487"], ["updated_at", "2022-06-07 15:51:18.550487"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar que corta las huinchas"], ["definition", "Estar muy ansioso o con muchísimos deseos de hacer algo"], ["created_at", "2022-06-07 15:51:18.552042"], ["updated_at", "2022-06-07 15:51:18.552042"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Importar un pucho"], ["definition", "No importa"], ["created_at", "2022-06-07 15:51:18.553640"], ["updated_at", "2022-06-07 15:51:18.553640"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar arriba de la pelota"], ["definition", "Estar borracho o drogado, pero no al extremo de perder el sentido"], ["created_at", "2022-06-07 15:51:18.555113"], ["updated_at", "2022-06-07 15:51:18.555113"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Sacar la ñoña / la cresta:"], ["definition", "Cuando a alguien le dan una paliza o se cae de forma aparatosa"], ["created_at", "2022-06-07 15:51:18.556854"], ["updated_at", "2022-06-07 15:51:18.556854"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar cachuo"], ["definition", "Tener dudas o sospechas"], ["created_at", "2022-06-07 15:51:18.558295"], ["updated_at", "2022-06-07 15:51:18.558295"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Creerse el hoyo del queque"], ["definition", "Creerse el mejor"], ["created_at", "2022-06-07 15:51:18.559752"], ["updated_at", "2022-06-07 15:51:18.559752"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Como piojo"], ["definition", "Estar borracho"], ["created_at", "2022-06-07 15:51:18.561184"], ["updated_at", "2022-06-07 15:51:18.561184"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Echar la yegua"], ["definition", "Cansarse o que te entra un poco de sueño, sobre todo después de comer"], ["created_at", "2022-06-07 15:51:18.562666"], ["updated_at", "2022-06-07 15:51:18.562666"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.8ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pasarlo chancho"], ["definition", "Pasarlo muy bien"], ["created_at", "2022-06-07 15:51:18.567452"], ["updated_at", "2022-06-07 15:51:18.567452"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Morir pollo"], ["definition", "Callarse"], ["created_at", "2022-06-07 15:51:18.569675"], ["updated_at", "2022-06-07 15:51:18.569675"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Echarse al pollo"], ["definition", "Irse"], ["created_at", "2022-06-07 15:51:18.571229"], ["updated_at", "2022-06-07 15:51:18.571229"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hablar cabezas de pescado"], ["definition", "Hablar tonterías"], ["created_at", "2022-06-07 15:51:18.572733"], ["updated_at", "2022-06-07 15:51:18.572733"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hacer una mosca"], ["definition", "Firmar abreviadamente, hacer un garabato de firma o una rúbrica"], ["created_at", "2022-06-07 15:51:18.574414"], ["updated_at", "2022-06-07 15:51:18.574414"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pasarlo la zorra / la raja"], ["definition", "Pasarlo muy bien"], ["created_at", "2022-06-07 15:51:18.575861"], ["updated_at", "2022-06-07 15:51:18.575861"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Irse al chancho"], ["definition", "Exagerar"], ["created_at", "2022-06-07 15:51:18.577409"], ["updated_at", "2022-06-07 15:51:18.577409"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar pal gato"], ["definition", "Estar enfermo, decaído, mal"], ["created_at", "2022-06-07 15:51:18.578977"], ["updated_at", "2022-06-07 15:51:18.578977"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Bajarse del pony"], ["definition", "Dejar de creerse la gran cosa"], ["created_at", "2022-06-07 15:51:18.580480"], ["updated_at", "2022-06-07 15:51:18.580480"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Mandarse un condoro"], ["definition", "Cometer un error grave"], ["created_at", "2022-06-07 15:51:18.581932"], ["updated_at", "2022-06-07 15:51:18.581932"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Embolinar la perdiz"], ["definition", "Tratar de confundir o engañar a otra persona con muchas palabras, burocracia o alguna técnica rebuscada"], ["created_at", "2022-06-07 15:51:18.583387"], ["updated_at", "2022-06-07 15:51:18.583387"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar meado de gato"], ["definition", "Tener muy mala suerte"], ["created_at", "2022-06-07 15:51:18.584847"], ["updated_at", "2022-06-07 15:51:18.584847"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Dejar como chaleco de mono"], ["definition", "Dejar a alguien mal parado o hacer que pierda la estima de los demás"], ["created_at", "2022-06-07 15:51:18.586345"], ["updated_at", "2022-06-07 15:51:18.586345"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Por si las moscas"], ["definition", "Hacer algo para prevenir un problema"], ["created_at", "2022-06-07 15:51:18.587843"], ["updated_at", "2022-06-07 15:51:18.587843"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Marca chancho"], ["definition", "Un producto de muy mala calidad, copia o de una marca desconocida"], ["created_at", "2022-06-07 15:51:18.589336"], ["updated_at", "2022-06-07 15:51:18.589336"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Chicotear los caracoles"], ["definition", "Realizar una tarea más rápido o apurarse"], ["created_at", "2022-06-07 15:51:18.590808"], ["updated_at", "2022-06-07 15:51:18.590808"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Darse una manito de gato / de tigre"], ["definition", "Arreglarse o acicalarse"], ["created_at", "2022-06-07 15:51:18.592086"], ["updated_at", "2022-06-07 15:51:18.592086"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Estar pato"], ["definition", "No tener dinero"], ["created_at", "2022-06-07 15:51:18.593483"], ["updated_at", "2022-06-07 15:51:18.593483"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser sapo"], ["definition", "Ser un entrometido que le gusta hablar de los demás, contando sus cosas privadas"], ["created_at", "2022-06-07 15:51:18.594849"], ["updated_at", "2022-06-07 15:51:18.594849"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Pasarlo chancho"], ["definition", "Divertirse"], ["created_at", "2022-06-07 15:51:18.596226"], ["updated_at", "2022-06-07 15:51:18.596226"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hacer perro muerto"], ["definition", "Irse de un restaurante/bar/café sin pagar"], ["created_at", "2022-06-07 15:51:18.597576"], ["updated_at", "2022-06-07 15:51:18.597576"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Hacer la vaca"], ["definition", "Hacer una colecta o juntar dinero"], ["created_at", "2022-06-07 15:51:18.598953"], ["updated_at", "2022-06-07 15:51:18.598953"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser avispado"], ["definition", "Ser ingenioso, ocurrente o de reacción rápida"], ["created_at", "2022-06-07 15:51:18.600318"], ["updated_at", "2022-06-07 15:51:18.600318"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Echar la foca"], ["definition", "Confrontar o reprender a alguien por una acción o actitud equivocada"], ["created_at", "2022-06-07 15:51:18.601593"], ["updated_at", "2022-06-07 15:51:18.601593"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExpression Create (0.2ms)[0m  [1m[32mINSERT INTO "expressions" ("sentence", "definition", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sentence", "Ser aperrado"], ["definition", "Ser valiente, osado o atrevido"], ["created_at", "2022-06-07 15:51:18.603000"], ["updated_at", "2022-06-07 15:51:18.603000"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-06-07 17:53:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 372)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 850)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 43174)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 48463)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/expressions" for ::1 at 2022-06-07 17:53:22 +0200
+Processing by ExpressionsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 3404)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-07 17:53:23 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 848)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 21211)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 178)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 29194)
+Completed 200 OK in 54ms (Views: 39.2ms | ActiveRecord: 4.6ms | Allocations: 37006)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/users/sign_up" for ::1 at 2022-06-07 17:53:31 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 226)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 7796)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 15781)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 17076)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started POST "/users" for ::1 at 2022-06-07 17:53:53 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mo@novapixels.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (6.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mo@novapixels.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mo@novapixels.net"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-06-07 15:53:54.106502"], ["updated_at", "2022-06-07 15:53:54.106502"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/expressions
+Completed 302 Found in 728ms (ActiveRecord: 8.4ms | Allocations: 10166)
+
+
+Started GET "/expressions" for ::1 at 2022-06-07 17:53:54 +0200
+Processing by ExpressionsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expressions/index.html.erb within layouts/application
+  [1m[36mExpression Load (1.0ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions"[0m
+  ↳ app/views/expressions/index.html.erb:6
+  Rendered expressions/_expression.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 18084)
+  Rendered shared/_navbar.html.erb (Duration: 0.2ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 26259)
+Completed 200 OK in 23ms (Views: 15.5ms | ActiveRecord: 5.4ms | Allocations: 29096)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/expressions/95" for ::1 at 2022-06-07 17:54:18 +0200
+Processing by ExpressionsController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExpression Load (0.3ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions" WHERE "expressions"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/expressions_controller.rb:63:in `set_expression'
+  Rendering layout layouts/application.html.erb
+  Rendering expressions/show.html.erb within layouts/application
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered expressions/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 655)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 334)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8691)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 11341)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/expressions/95/edit" for ::1 at 2022-06-07 17:54:38 +0200
+Processing by ExpressionsController#edit as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExpression Load (0.2ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions" WHERE "expressions"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/expressions_controller.rb:63:in `set_expression'
+  Rendering layout layouts/application.html.erb
+  Rendering expressions/edit.html.erb within layouts/application
+  Rendered expressions/_form.html.erb (Duration: 10.7ms | Allocations: 4848)
+  Rendered expressions/edit.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5219)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 334)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 13293)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.5ms | Allocations: 15289)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started PATCH "/expressions/95" for ::1 at 2022-06-07 17:54:42 +0200
+Processing by ExpressionsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "expression"=>{"sentence"=>"Hacer el perro muerto", "definition"=>"Irse de un restaurante/bar/café sin pagar"}, "commit"=>"Update Expression", "id"=>"95"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExpression Load (0.2ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions" WHERE "expressions"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/expressions_controller.rb:63:in `set_expression'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expressions_controller.rb:40:in `block in update'
+  [1m[36mExpression Update (0.8ms)[0m  [1m[33mUPDATE "expressions" SET "sentence" = $1, "updated_at" = $2 WHERE "expressions"."id" = $3[0m  [["sentence", "Hacer el perro muerto"], ["updated_at", "2022-06-07 15:54:42.903543"], ["id", 95]]
+  ↳ app/controllers/expressions_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expressions_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/expressions/95
+Completed 302 Found in 14ms (ActiveRecord: 2.2ms | Allocations: 3835)
+
+
+Started GET "/expressions/95" for ::1 at 2022-06-07 17:54:42 +0200
+Processing by ExpressionsController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mExpression Load (0.3ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions" WHERE "expressions"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  ↳ app/controllers/expressions_controller.rb:63:in `set_expression'
+  Rendering layout layouts/application.html.erb
+  Rendering expressions/show.html.erb within layouts/application
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered expressions/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 436)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 334)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8503)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 10477)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/expressions" for ::1 at 2022-06-07 17:54:54 +0200
+Processing by ExpressionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering expressions/index.html.erb within layouts/application
+  [1m[36mExpression Load (0.5ms)[0m  [1m[34mSELECT "expressions".* FROM "expressions"[0m
+  ↳ app/views/expressions/index.html.erb:6
+  Rendered expressions/_expression.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.3ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.4ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered expressions/_expression.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/_expression.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered expressions/index.html.erb within layouts/application (Duration: 34.2ms | Allocations: 14244)
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 334)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 22328)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.9ms | Allocations: 23812)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
