@@ -1,53 +1,124 @@
-  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "chilenista_development"[0m
-  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "chilenista_test"[0m
-  [1m[35m (119.3ms)[0m  [1m[35mCREATE DATABASE "chilenista_development" ENCODING = 'unicode'[0m
-  [1m[35m (37.4ms)[0m  [1m[35mCREATE DATABASE "chilenista_test" ENCODING = 'unicode'[0m
-  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
-  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7108427753965060740)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "chilenista_2_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "chilenista_2_test"[0m
+  [1m[35m (101.4ms)[0m  [1m[35mCREATE DATABASE "chilenista_2_development" ENCODING = 'unicode'[0m
+  [1m[35m (37.8ms)[0m  [1m[35mCREATE DATABASE "chilenista_2_test" ENCODING = 'unicode'[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2646884912115203970)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-07 14:26:31.198870"], ["updated_at", "2022-06-07 14:26:31.198870"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-07 15:16:47.308828"], ["updated_at", "2022-06-07 15:16:47.308828"]]
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7108427753965060740)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7108427753965060740)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to DeviseCreateUsers (20220607142633)
-  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
-  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
-  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
-  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220607142633"]]
-  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7108427753965060740)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2646884912115203970)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2646884912115203970)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started GET "/" for 127.0.0.1 at 2022-06-07 16:28:37 +0200
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220607151650)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220607151650"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2646884912115203970)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-06-07 17:19:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#home as HTML
   Rendering layout layouts/application.html.erb
   Rendering pages/home.html.erb within layouts/application
-  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 479)
-  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 34298)
-Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms | Allocations: 40787)
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 479)
+  Rendered layout layouts/application.html.erb (Duration: 4051.5ms | Allocations: 161738)
+Completed 500 Internal Server Error in 4059ms (ActiveRecord: 0.0ms | Allocations: 168164)
 
 
   
-ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
-        on line 7:1 of app/assets/stylesheets/application.scss
->> @import "bootstrap/scss/bootstrap";
-
-   ^
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
 ):
-     6:     <%= csrf_meta_tags %>
      7:     <%= csp_meta_tag %>
      8: 
      9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    10:     <%= javascript_importmap_tags %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     11:   </head>
     12: 
+    13:   <body><%= render "shared/navbar" %>
   
-app/assets/stylesheets/application.scss:7
-app/views/layouts/application.html.erb:9
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-06-07 17:20:56 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 45791)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 51030)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body><%= render "shared/navbar" %>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-06-07 17:20:57 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 10076)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 10347)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body><%= render "shared/navbar" %>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2022-06-07 17:24:38 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 123)
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | Allocations: 839)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 238)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 9336)
+Completed 200 OK in 45ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 10398)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-07 17:25:07 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 848)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 58.3ms | Allocations: 31105)
+  Rendered shared/_navbar.html.erb (Duration: 0.1ms | Allocations: 178)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 38793)
+Completed 200 OK in 89ms (Views: 65.3ms | ActiveRecord: 7.2ms | Allocations: 46937)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js"):
+  
+Started GET "/expressions" for 127.0.0.1 at 2022-06-07 17:33:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/expressions"):
+  

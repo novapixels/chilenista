@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chilenista</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chilenista2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+  <body><%= render "shared/navbar" %>
+<%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
